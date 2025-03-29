@@ -13,9 +13,9 @@ function Home() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="rounded-full overflow-hidden w-96 h-96 mx-auto">
+            <div className="rounded-[110px] overflow-hidden w-[350px] h-88 mx-auto">
               <img
-                src="https://via.placeholder.com/400x400"
+                src="hero.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
@@ -38,13 +38,13 @@ function Home() {
             <div className="flex gap-4">
               <Link
                 to="/projects"
-                className="bg-emerald-400 text-emerald-900 px-8 py-3 rounded-lg hover:bg-emerald-300 transition duration-300 font-medium"
+                className="bg-emerald-400 text-emerald-900 px-8 py-3 rounded-3xl hover:bg-emerald-300 transition duration-300 font-medium"
               >
                 View my work
               </Link>
               <Link
                 to="/about"
-                className="border-2 border-emerald-400 text-emerald-400 px-8 py-3 rounded-lg hover:bg-emerald-400 hover:text-emerald-900 transition duration-300 font-medium"
+                className="border-2 border-emerald-400 text-emerald-400 px-8 py-3 rounded-3xl hover:bg-emerald-400 hover:text-emerald-900 transition duration-300 font-medium"
               >
                 View my Resume
               </Link>

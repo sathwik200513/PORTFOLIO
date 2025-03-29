@@ -30,10 +30,10 @@ function Navbar() {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`px-3 py-2 rounded-md text-sm font-medium ${
+                className={`px-3 py-2 rounded-md text-md font-medium ${
                   location.pathname === item.path
-                    ? 'text-emerald-400 bg-emerald-800'
-                    : 'text-gray-300 hover:text-emerald-400 hover:bg-emerald-800'
+                    ? 'text-emerald-400'
+                    : 'text-gray-300 hover:text-emerald-400'
                 }`}
               >
                 {item.label}
