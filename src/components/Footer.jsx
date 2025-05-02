@@ -1,39 +1,232 @@
-import React from 'react';
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
+import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi';
 
-function Footer() {
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+  
+  const socialLinks = [
+    { id: 'github', icon: <FiGithub />, url: 'https://github.com' },
+    { id: 'linkedin', icon: <FiLinkedin />, url: 'https://linkedin.com' },
+    { id: 'twitter', icon: <FiTwitter />, url: 'https://twitter.com' },
+    { id: 'email', icon: <FiMail />, url: 'mailto:example@example.com' }
+  ];
+  
   return (
-    <footer className="bg-emerald-900 text-white pb-6 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex justify-center space-x-4">
-            <a href="https://www.linkedin.com/in/sathwik2005/" target='_blank' className="text-gray-300 hover:text-white" aria-label="LinkedIn">
-              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
-              </svg>
-            </a>
-            <a href="https://github.com/sathwik200513" target='_blank' className="text-gray-300 hover:text-white" aria-label="GitHub">
-              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-              </svg>
-            </a>
-            <a href="https://www.instagram.com/_7wikk/" target='_blank' className="text-gray-300 hover:text-white" aria-label="Twitter">
-              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5ZM12 6.75a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5Zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5ZM17.25 6a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Z" />
-              </svg>
-            </a>
-            <a href="https://x.com/sathwik99923774" target='_blank' className="text-gray-300 hover:text-white" aria-label="Twitter">
-              <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-        <p className="text-gray-300 mt-4">
-          © {new Date().getFullYear()} Made with ❤️ by <span className='text-[#34d399]' >Sathwik</span> Using Reactjs
-        </p>
-      </div>
-    </footer>
+    <FooterContainer>
+      <FooterContent>
+        <TopSection>
+          <LogoSection>
+            <FooterLogo>Portfolio</FooterLogo>
+            <Tagline>Crafting digital experiences that matter</Tagline>
+          </LogoSection>
+          
+          <LinksSection>
+            <LinkColumn>
+              <LinkTitle>Navigation</LinkTitle>
+              <LinkList>
+                <LinkItem><Link href="#home">Home</Link></LinkItem>
+                <LinkItem><Link href="#about">About</Link></LinkItem>
+                <LinkItem><Link href="#certifications">Certifications</Link></LinkItem>
+                <LinkItem><Link href="#projects">Projects</Link></LinkItem>
+                <LinkItem><Link href="#contact">Contact</Link></LinkItem>
+              </LinkList>
+            </LinkColumn>
+            
+            <LinkColumn>
+              <LinkTitle>Contact</LinkTitle>
+              <LinkList>
+                <LinkItem><InfoLink href="tel:+1234567890">+1 (234) 567-890</InfoLink></LinkItem>
+                <LinkItem><InfoLink href="mailto:example@example.com">example@example.com</InfoLink></LinkItem>
+                <LinkItem>San Francisco, CA</LinkItem>
+              </LinkList>
+            </LinkColumn>
+          </LinksSection>
+        </TopSection>
+        
+        <Divider />
+        
+        <BottomSection>
+          <Copyright>© {currentYear} Portfolio. All rights reserved.</Copyright>
+          
+          <SocialLinks>
+            {socialLinks.map(link => (
+              <SocialLink key={link.id} href={link.url} target="_blank" rel="noopener noreferrer">
+                <motion.div
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  {link.icon}
+                </motion.div>
+              </SocialLink>
+            ))}
+          </SocialLinks>
+        </BottomSection>
+      </FooterContent>
+    </FooterContainer>
   );
-}
+};
+
+const FooterContainer = styled.footer`
+  background-color: var(--neutral-100);
+  padding: 4rem 0 2rem;
+  
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--neutral-900);
+  }
+`;
+
+const FooterContent = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+`;
+
+const TopSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+const LogoSection = styled.div`
+  max-width: 300px;
+`;
+
+const FooterLogo = styled.h2`
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary-600), var(--accent-500));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+`;
+
+const Tagline = styled.p`
+  color: var(--neutral-600);
+  font-size: 1rem;
+  margin-bottom: 0;
+  
+  @media (prefers-color-scheme: dark) {
+    color: var(--neutral-400);
+  }
+`;
+
+const LinksSection = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+`;
+
+const LinkColumn = styled.div`
+  min-width: 160px;
+`;
+
+const LinkTitle = styled.h3`
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--neutral-800);
+  
+  @media (prefers-color-scheme: dark) {
+    color: var(--neutral-200);
+  }
+`;
+
+const LinkList = styled.ul`
+  list-style: none;
+  padding: 0;
+  margin: 0;
+`;
+
+const LinkItem = styled.li`
+  margin-bottom: 0.5rem;
+`;
+
+const Link = styled.a`
+  color: var(--neutral-600);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: var(--primary-600);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    color: var(--neutral-400);
+    
+    &:hover {
+      color: var(--primary-400);
+    }
+  }
+`;
+
+const InfoLink = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`;
+
+const Divider = styled.hr`
+  border: none;
+  height: 1px;
+  background-color: var(--neutral-200);
+  margin: 2rem 0;
+  
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--neutral-700);
+  }
+`;
+
+const BottomSection = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  
+  @media (min-width: ${props => props.theme.breakpoints.md}) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
+
+const Copyright = styled.p`
+  color: var(--neutral-500);
+  font-size: 0.875rem;
+  margin: 0;
+  
+  @media (prefers-color-scheme: dark) {
+    color: var(--neutral-500);
+  }
+`;
+
+const SocialLinks = styled.div`
+  display: flex;
+  gap: 1.5rem;
+`;
+
+const SocialLink = styled.a`
+  color: var(--neutral-600);
+  font-size: 1.25rem;
+  transition: color 0.2s ease;
+  
+  &:hover {
+    color: var(--primary-600);
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    color: var(--neutral-400);
+    
+    &:hover {
+      color: var(--primary-400);
+    }
+  }
+`;
 
 export default Footer;
