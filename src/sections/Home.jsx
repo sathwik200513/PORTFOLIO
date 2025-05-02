@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { FiArrowDown } from 'react-icons/fi';
+import { TypeAnimation } from 'react-type-animation';
 
 const Home = ({ scrollPosition }) => {
   return (
@@ -68,7 +69,25 @@ const Home = ({ scrollPosition }) => {
           transition={{ duration: 0.8, delay: 0.6 }}
         >
           <RoleText>
-            <span>Full-Stack</span> Developer
+          <h3 className="text-4xl md:text-6xl font-bold mb-4">
+              {" "}
+                I am a
+              <TypeAnimation
+                  sequence={[
+                    " Full Stack Developer",
+                    2000,
+                    " Java Enthusiast",
+                    2000,
+                    " Data Science Enthusiast",
+                    2000,
+                    " Fast Learner",
+                    2000,
+                    " Programmer",
+                    2000,
+                  ]}
+                  repeat={Infinity}
+                />
+            </h3>
           </RoleText>
         </motion.div>
         
@@ -88,7 +107,7 @@ const Home = ({ scrollPosition }) => {
           transition={{ duration: 0.8, delay: 1 }}
         >
           <CTAContainer>
-            <PrimaryButton href="#contact">Hire Me</PrimaryButton>
+            <PrimaryButton href="https://drive.google.com/file/d/1r91YxmJuZmmMnzS7NUVgtsvBKFI7W-i4/view?usp=sharingt " target="_blank">Resume</PrimaryButton>
             <SecondaryButton href="#projects">View Projects</SecondaryButton>
           </CTAContainer>
         </motion.div>

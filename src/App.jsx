@@ -9,6 +9,8 @@ import Contact from './sections/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import CustomCursor from './components/CustomCursor.jsx';
 import LoadingScreen from './components/LoadingScreen.jsx';
+import BackToTop from './components/BackToTop.jsx';
+
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,9 +53,11 @@ function App() {
             <Projects />
             <Contact />
           </main>
+          <BackToTop/>
           <Footer />
         </>
       )}
+
     </AppContainer>
   );
 }

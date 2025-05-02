@@ -48,7 +48,7 @@ const About = () => {
                 transition={{ duration: 0.6 }}
                 viewport={{ once: true, amount: 0.3 }}
               >
-                <ProfileImage src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600" alt="John Doe" />
+                <ProfileImage src="hero.jpg" alt="John Doe" />
                 <ImageDecorator />
               </motion.div>
               <PolaroidDecoration />
@@ -61,19 +61,22 @@ const About = () => {
                 transition={{ duration: 0.5, delay: 0.1 }}
                 viewport={{ once: true, amount: 0.5 }}
               >
-                <Greeting>Nice to meet you!</Greeting>
+                <Greeting>Hello!</Greeting>
                 <AboutText>
-                  I'm a passionate <Highlight>Full-Stack Developer</Highlight> with 5+ years of experience building web applications. My journey in tech started when I built my first website at 14, and I've been hooked ever since.
-                </AboutText>
+                Driven Software Engineer with a solid foundation in <Highlight>Java, Spring Boot, React and Django</Highlight>
+                 demonstrated through hands-on full-stack web development projects. Skilled in solving complex problems via <Highlight>Data Structures
+                & Algorithms </Highlight>and crafting intuitive user interfaces with a <Highlight>UI-UX </Highlight>approach.               
+                 </AboutText>
+
                 <AboutText>
-                  I specialize in creating responsive, user-friendly interfaces and robust backend systems. My approach combines technical expertise with creative problem-solving to deliver solutions that not only work flawlessly but also provide exceptional user experiences.
-                </AboutText>
+                Developed scalable applications by integrating React frontend with Spring Boot/Django backend, leveraging creative problem solving skills. Excited
+                to contribute technical expertise and collaborate in agile teams                </AboutText>
                 <AboutText>
-                  When I'm not coding, you'll find me hiking in the mountains, reading science fiction, or experimenting with new cooking recipes.
+                  When I'm not coding, you'll find me cycling, Doodling, watching science fiction.
                 </AboutText>
               </motion.div>
               
-              <StatsContainer>
+              {/* <StatsContainer>
                 <StatItem>
                   <StatCount>5+</StatCount>
                   <StatLabel>Years Experience</StatLabel>
@@ -88,7 +91,7 @@ const About = () => {
                   <StatCount>20+</StatCount>
                   <StatLabel>Happy Clients</StatLabel>
                 </StatItem>
-              </StatsContainer>
+              </StatsContainer> */}
             </AboutInfo>
           </AboutContent>
           

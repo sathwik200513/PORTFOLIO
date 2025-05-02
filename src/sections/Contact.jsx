@@ -74,9 +74,9 @@ const Contact = () => {
   };
   
   const contactInfo = [
-    { id: 'email', icon: <FiMail />, title: 'Email', value: 'contact@example.com', link: 'mailto:contact@example.com' },
-    { id: 'phone', icon: <FiPhone />, title: 'Phone', value: '(123) 456-7890', link: 'tel:+11234567890' },
-    { id: 'address', icon: <FiMapPin />, title: 'Address', value: 'San Francisco, CA', link: 'https://maps.google.com/?q=San+Francisco' }
+    { id: 'email', icon: <FiMail />, title: 'Email', value: 'sathwikmarch2005@gmail.com', link: 'mailto:sathwikmarch2005@gmail.com' },
+    { id: 'phone', icon: <FiPhone />, title: 'Phone', value: '+91 6304990760', link: 'tel:+916304990760' },
+    { id: 'address', icon: <FiMapPin />, title: 'Address', value: 'Sangareddy, Telegana', link: 'https://maps.google.com/?q=San+Francisco' }
   ];
   
   return (
@@ -210,7 +210,7 @@ const Contact = () => {
                         <FiSend />
                         <span>Send Message</span>
                       </>
-                    )}
+                    )}    
                   </SubmitButton>
                 </ContactForm>
               )}
